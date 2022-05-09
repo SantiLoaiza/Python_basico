@@ -1,0 +1,22 @@
+from unicodedata import name
+def palindromo(palabra):
+    palabra = palabra.replace(' ', '')
+    palabra = palabra.lower()
+    palabra_invertida = palabra [::-1]
+    if palabra == palabra_invertida:
+        return True
+    else:
+        return False
+
+
+def run():
+    palabra = input('Escriba una palabra para saber si es palindromo o no: ')
+    es_palindromo = palindromo(palabra)
+    if es_palindromo == True:
+        print('Es palindromo')
+    else:
+        print ('No es palindromo')    
+
+
+if __name__ == '__main__':
+    run()
